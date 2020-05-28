@@ -1,9 +1,6 @@
 pipeline {
     agent {
-        docker {
-            image 'dass-jenkins_xw-slave:latest'
-            label 'xw-slave'
-        }
+        label 'xw-slave'
     }
     triggers {
         cron('@hourly')
