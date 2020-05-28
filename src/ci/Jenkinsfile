@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'dass-jenkins_xw-slave:latest'
+            label 'xw-slave'
+        }
+    }
     triggers {
         cron('@hourly')
         pollSCM('* * * * *')
