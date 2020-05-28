@@ -10,10 +10,6 @@ pipeline {
         buildDiscarder(logRotator(daysToKeepStr: '30'))
         disableConcurrentBuilds()
     }
-    tools {
-        maven 'Maven 3'
-        jdk 'open-jdk8'
-    }
     stages {
         stage ('Checkout') {
             steps {
